@@ -1,0 +1,17 @@
+.sideBar1 , .sideBar2 {
+	position: -webkit-sticky;
+	position: sticky;
+	height: 70vh;
+	top: 110px;
+}
+
+/* .sidebar2 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+} */
+
+app-header {
+	position: sticky;
+	top: 0;
+}

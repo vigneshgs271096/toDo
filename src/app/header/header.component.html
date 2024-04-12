@@ -1,0 +1,15 @@
+<p-menubar [model]="items">
+	<ng-template pTemplate="start">
+		<div class="d-flex">
+			<!-- <span></span> -->
+			<h2 class="m-1"><span><i class="pi pi-clock me-2 headerIcon" style="font-size: 1.75rem"></i></span>Trust
+				Process</h2>
+		</div>
+	</ng-template>
+	<ng-template pTemplate="end">
+		<div class="flex justify-content-center align-items-center endMenu">
+			<button type="button" class="btn btn-danger addBtn" (click)="addTask()">Add List</button>
+			<!-- <p-inputSwitch [(ngModel)]="darkMode" (ngModelChange)="toggleDarkMode(darkMode)"></p-inputSwitch> -->
+		</div>
+	</ng-template>
+</p-menubar>

@@ -1,0 +1,30 @@
+<!-- <p>tasks-list works!</p>
+<h1 class="heading py-4 text-center"> <span><i class="pi pi-folder me-2 fs-4"></i></span>Categories</h1> -->
+<div class="row">
+	<div class="col d-flex justify-content-center">Status</div>
+	<div class="col d-flex justify-content-center">Task</div>
+	<div class="col d-flex justify-content-center">Due Date</div>
+	<div class="col d-flex justify-content-center">Actions</div>
+</div>
+
+@for (task of tasksList; track task._id) {
+<div class="w-100 box my-3 m-2 row">
+	<div
+		class="tasks d-flex align-items-center row border border-1 w-100 text-truncate fs-3">
+
+		<div class="flex justify-content-center col text-center align-items-center">
+			<p-checkbox [(ngModel)]="task.completed" [binary]="true" inputId="binary" (ngModelChange)="updateTask(task)"></p-checkbox>
+		</div>
+		<div class="d-flex justify-content-center col">{{task.title}}</div>
+		<div class="d-flex justify-content-center col">{{task.due_date  | date: 'dd/MM/yyyy'  || ''}}</div>
+		<div class="d-flex justify-content-center col">
+			<i class="bi bi-pen mx-1" (click)="editTask(task)"></i>
+			<i class="bi bi-trash mx-1" (click)="deleteTask(task._id)"></i>
+		</div>
+	</div>
+</div>
+} @empty {
+<div class="w-100 box my-3 m-2 border border-1">
+	<h3 class="text-center">No pending tasks to show</h3>
+</div>
+}

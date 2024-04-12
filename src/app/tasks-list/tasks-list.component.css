@@ -1,0 +1,26 @@
+.heading {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.box {
+	position: relative;
+}
+
+.tasks {
+	display: block;
+	min-height: 60px;
+	/* position: absolute; */
+	transition: 0.5s;
+}
+
+/* Apply a higher z-index value to the span when hovered */
+.tasks:hover {
+    translate: 0px 5px;
+    color: red;
+    box-shadow: 5px 5px 3px whitesmoke;
+    flex-grow: 1;
+    flex-shrink: 1;
+    cursor: pointer;
+    scale: 1.01;
+}

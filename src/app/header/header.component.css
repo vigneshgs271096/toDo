@@ -1,0 +1,25 @@
+.custom-icon-color {
+	color: red;
+	/* Change the color to red */
+}
+
+p-menubar {
+	border-radius: 15px;
+}
+
+.endMenu {
+	position: relative;
+}
+
+p-inputSwitch {
+    position: absolute;
+    right: 20px;
+    top: -15px;
+}
+
+.addBtn {
+	/* position: absolute; */
+	right: 50px;
+	top: -20px
+}
+

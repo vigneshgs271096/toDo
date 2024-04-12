@@ -1,0 +1,26 @@
+.heading {
+	font-size: 25px;
+	font-weight: 500;
+}
+
+.box {
+	position: relative;
+}
+
+.goals {
+	display: block;
+	min-height: 60px;
+	position: absolute; /* Ensure that the element is positioned */
+	transition: 0.5s;
+}
+
+/* Apply a higher z-index value to the span when hovered */
+.goals:hover {
+  z-index: 9999; /* or any value higher than the default z-index */
+	translate: -5px 5px;
+	color: red;
+	box-shadow: 5px 5px 1px whitesmoke;
+	flex-grow: 1;
+	flex-shrink: 1;
+	cursor: pointer;
+}

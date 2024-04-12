@@ -1,0 +1,29 @@
+<div class="row">
+	<div class="col d-flex justify-content-center">Goal</div>
+	<div class="col d-flex justify-content-center">Start Date</div>
+	<div class="col d-flex justify-content-center">End Date</div>
+	<div class="col d-flex justify-content-center">Actions</div>
+</div>
+@for (goal of goalsList; track goal._id) {
+<div class="w-100 box my-3 m-2 row">
+	<div
+		class="goals d-flex align-items-center justify-content-between border border-1 w-100 text-truncate fs-3 col-md-12">
+		<div>{{goal.title}}</div>
+		<div>{{goal.start_date | date: 'dd/MM/yyyy'  || ''}}</div>
+		<div>{{ goal.due_date | date: 'dd/MM/yyyy'  || ''}}</div>
+		
+		<div class="col-md-3 d-flex justify-content-center">
+			<i class="bi bi-pen mx-1 cursor-pointer" (click)="editGoal(goal)"></i>
+			<i class="bi bi-trash mx-1 cursor-pointer" (click)="deleteGoal(goal._id)"></i>
+		</div>
+	</div>
+</div>
+} @empty {
+<div class="w-100 box my-3 m-2 border border-1">
+	<h3 class="text-center">No pending goals to Show</h3>
+</div>
+}
+
+<div class="addGoal bg-danger d-flex align-items-center justify-content-center" (click)="openGoalForm()">
+	<i class="bi bi-plus fs-1 bg-danger" style="scale: 2;"></i>
+</div>

@@ -1,1 +1,99 @@
 /* You can add global styles to this file, and also import other style files */
+@import "primeng/resources/themes/lara-light-blue/theme.css";
+@import "primeng/resources/primeng.css";
+@import 'bootstrap/dist/css/bootstrap.min.css';
+@import '../src/app/ng-select.css';
+/* @import "~@ng-select/ng-select/themes/default.theme.css"; */
+
+@import "primeicons/primeicons.css";
+
+/* * ,.card {
+	color: white;
+	background-color: black;
+} */
+
+/* :root {
+	--bg-color: lightblue;
+	--text-color: black;
+}
+  
+
+body {
+	background-color: var(--bg-color);
+	color: var(--text-color);
+} */
+  
+
+body {
+	font-family: 'Roboto' , sans-serif;
+}
+
+.headerIcon {
+	color: #f95959;
+}
+
+.first-color {
+	background: #233142;
+}
+
+.second-color {
+	background: #455d7a;
+}
+
+.third-color {
+	background: #f95959;
+}
+
+.fourth-color {
+	background: #e3e3e3;
+}
+
+html,
+body {
+	height: 100vh;
+}
+
+app-header p-menubar .p-menubar .p-menubar-button {
+	position: absolute;
+	right: 15px;
+	scale: 1.5;
+}
+
+.p-menubar .p-menubar-button:focus {
+	outline: 0 none;
+	outline-offset: 0;
+	box-shadow: 0 0 0 0.2rem #455d7a;
+}
+
+.cursor-pointer {
+	cursor: pointer;
+}
+
+.btn-danger, .bg-danger {
+	background: #f95959;
+}
+
+.p-inputtext:enabled:focus {
+    outline: 0 none;
+    outline-offset: 0;
+    box-shadow: 0 0 0 0.2rem #BFDBFE;
+    border-color: #f95959;
+}
+
+.p-inputtext:enabled:hover {
+    border-color: #f95959;
+}
+
+/* .ng-dropdown-panel .ng-dropdown-panel-items .ng-option.ng-option-marked {
+    background-color: white !important;
+    color: black !important;
+}
+
+.ng-dropdown-panel:hover .ng-dropdown-panel-items .ng-option.ng-option-marked {
+    background-color: black !important;
+    color:  #f95959 !important;
+} */
+
+/* .ng-option-label .ng-star-inserted {
+	background-color: white !important;
+} */

@@ -1,0 +1,48 @@
+<div class="card">
+    <div class="card-header">
+        <h2>{{ action == 'create' ? 'Create' : 'Update' }} Task</h2>
+    </div>
+    <div class="card-body">
+        <form #form="ngForm" (ngSubmit)="saveTask(form)" class="row">
+            <div class=" flex my-5 col-md-6">
+                <span class="p-float-label">
+                    <input pInputText id="name" [(ngModel)]="task.title" name="Title" />
+                    <label for="name">name</label>
+                </span>
+            </div>
+            <!-- <div class="flex my-5 col-md-6">
+                <span class="p-float-label">
+                    <p-inputNumber inputId="integeronly" [(ngModel)]="task.count" name="Count"> </p-inputNumber>
+                    <label for="number-input">Number</label>
+                </span>
+            </div> -->
+            <div class="flex my-5 col-md-6">
+                <span class="p-float-label">
+                    <p-calendar [(ngModel)]="task.due_date" [iconDisplay]="'input'" [showIcon]="true" inputId="due" name="due_date"></p-calendar>
+                    <label for="due">Due Date</label>
+                </span>
+            </div> 
+            <div class="flex my-5 justify-content-center d-block col-md-12">
+                <span class="p-float-label">
+                    <textarea id="float-input" rows="5" cols="30" pInputTextarea [(ngModel)]="task.description" name="Description"></textarea>
+                    <label for="float-input">Summary</label>
+                </span>
+            </div>
+            <div class="col-md-12 my-5">
+                <label for="float-goal" class="py-1 px-1">Goal</label>
+                <ng-select id="float-input" [items]="goalsList" bindLabel="title" bindValue="_id" [(ngModel)]="task.goal" name="Goal" style="font-family: roboto" placeholder="Goal">
+                </ng-select>
+            </div>
+            <div class="col-md-12 my-5">
+                <label for="float-goal" class="py-1 px-1">Category</label>
+                <ng-select [items]="categories" bindLabel="name" bindValue="_id" [(ngModel)]="task.category" name="Category" style="font-family: roboto" placeholder="Category">
+                </ng-select>
+            </div>
+            <div>
+                
+                <button class="btn btn-danger float-end w-25 my-3">Submit</button>
+            </div>
+        </form>
+    </div>
+
+</div>

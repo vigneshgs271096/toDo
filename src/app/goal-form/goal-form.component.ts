@@ -62,8 +62,6 @@ export class GoalFormComponent implements OnInit{
 
   saveGoal(form: any) {
     if(!form.form.invalid) {
-        // Type assertion to inform TypeScript about the dynamic method invocation
-  // const goalServiceWithAction = this.goalService as { [key: string]: (goal: any) => Observable<any> };
       if(this.action == 'create') {
         this.goalService.createGoal(this.goal).subscribe((data:any)=>{
           this.router.navigate(['goals']);
